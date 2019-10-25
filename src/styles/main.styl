@@ -1,0 +1,845 @@
+fontRegular = CodecColdRegular
+fontBold = CodecColdBold
+fontExtraBold = CodecColdExtraBold
+fontHeavy = CodecColdHeavy
+fontLight = CodecColdLight
+fontVarRegular = MullerRegular
+fontVarMedium = MullerMedium
+fontVarBold = MullerBold
+fontVarExtraBold = MullerExtraBold
+fontVar2Regular = GothamProRegular
+colorWhite = #ffffff
+colorGrey = #9c9c9c
+colorLight = #f4f4f4
+colorDark = #2c3e50
+colorRed = #7f233f
+
+tile()
+  background colorWhite
+  box-shadow 0 0 40px rgba(0,0,0,0.12)
+
+@font-face
+  font-family GothamProRegular
+  src url(../assets/fonts/GothamPro.woff2) format('woff2'),
+  url(../assets/fonts/GothamPro.woff) format('woff')
+
+@font-face
+  font-family MullerRegular
+  src url(../assets/fonts/MullerRegular.woff2) format('woff2'),
+  url(../assets/fonts/MullerRegular.woff) format('woff')
+
+@font-face
+  font-family MullerMedium
+  src url(../assets/fonts/MullerMedium.woff2) format('woff2'),
+  url(../assets/fonts/MullerMedium.woff) format('woff')
+
+@font-face
+  font-family MullerBold
+  src url(../assets/fonts/MullerBold.woff2) format('woff2'),
+  url(../assets/fonts/MullerBold.woff) format('woff')
+
+@font-face
+  font-family MullerExtraBold
+  src url(../assets/fonts/MullerExtraBold.woff2) format('woff2'),
+  url(../assets/fonts/MullerExtraBold.woff) format('woff')
+
+@font-face
+  font-family CodecColdRegular
+  src url(../assets/fonts/CodecCold-Regular.woff2) format('woff2'),
+  url(../assets/fonts/CodecCold-Regular.woff) format('woff')
+
+@font-face
+  font-family CodecColdBold
+  src url(../assets/fonts/CodecCold-Bold.woff2) format('woff2'),
+  url(../assets/fonts/CodecCold-Bold.woff) format('woff')
+
+@font-face
+  font-family CodecColdExtraBold
+  src url(../assets/fonts/CodecCold-ExtraBold.woff2) format('woff2'),
+  url(../assets/fonts/MCodecCold-ExtraBold.woff) format('woff')
+
+@font-face
+  font-family CodecColdHeavy
+  src url(../assets/fonts/CodecCold-Heavy.woff2) format('woff2'),
+  url(../assets/fonts/CodecCold-Heavy.woff) format('woff')
+
+@font-face
+  font-family CodecColdLight
+  src url(../assets/fonts/CodecCold-Light.woff2) format('woff2'),
+  url(../assets/fonts/CodecCold-Light.woff) format('woff')
+
+input
+textarea
+  resize none
+
+button
+a
+  display inline-block
+  &:focus
+    box-shadow none
+
+//bootstrap macOs fix
+.row
+  &:before
+  &:after
+    display inline-block !important
+    content normal
+
+//styles
+body
+  font-family fontRegular, Arial, sans-serif
+  font-size 16px
+  color colorDark
+  line-height 1
+  background-color colorWhite
+
+a
+  color colorDark
+  &:hover
+  &:focus
+    color colorDark
+    text-decoration none
+
+.a-red
+  color colorRed
+  &:hover
+  &:focus
+    color colorRed
+    text-decoration none
+
+img
+  display block
+  margin auto
+  max-width 100%
+  max-height 100%
+
+ul
+  list-style none
+  margin 0
+  padding 0
+  li
+    &:last-of-type
+      margin-bottom 0
+
+p
+  &:last-of-type
+    margin-bottom 0
+
+button
+  &:focus
+    outline none
+
+.container
+  padding 0 10px
+
+.row
+  margin-left 0
+  margin-right 0
+
+[class*="col-"]
+  padding-left 0
+  padding-right 0
+
+.page
+  padding-top 50px
+
+h1,h2,h3,h4,
+.h1,.h2,.h3,.h4
+  font-family fontBold
+  color colorRed
+  line-height 1.4
+  margin-bottom 0
+  padding 0!important
+
+h1
+.h1
+  font-size 30px
+  margin-bottom 30px
+  .main-title &
+    margin-bottom 10px
+  .about-title &
+    margin-bottom 30px
+
+h2
+.h2
+  font-size 22px
+  margin-bottom 20px
+
+.h2-principles
+  margin-bottom 30px
+
+h3
+.h3
+  font-family fontExtraBold
+  font-size 18px
+  margin-bottom 20px
+
+h4
+.h4
+  font-size 16px
+  margin-bottom 30px
+
+.screen-main
+  position relative
+  height calc(100vh - 110px)
+  display flex
+  flex-direction column
+  justify-content space-between
+
+.main-title
+  background url("../assets/images/bg-main.png") no-repeat left
+  background-size cover
+  height 146px
+  padding-top 20px
+  margin-bottom 30px
+  h2
+  .h2
+    color colorDark
+    margin-bottom 0
+
+.section
+  position relative
+  padding-bottom 100px
+
+.text-large
+  font-family fontRegular
+  font-size 16px
+  line-height 1.6
+  color colorDark
+
+.text-regular
+  font-family fontRegular
+  font-size 13px
+  line-height 1.8
+  color colorDark
+
+.img-index
+  position relative
+  z-index 100
+
+.link-next-wrapper
+  position relative
+  bottom 10%
+  text-align center
+
+.link-next
+  display inline-flex
+  flex-direction column
+  font-family fontRegular
+  font-size 16px
+  line-height 1.6
+  color #343434
+  &:after
+    content ""
+    background url("../assets/images/arrow.png") no-repeat
+    background-size contain
+    width 16px
+    height 16px
+    transform rotate(90deg)
+    margin 8px auto 0
+
+.link-bg-s
+  display flex
+  flex-direction column
+  justify-content center
+  align-items flex-end
+  background url("../assets/images/link-bg-320-s.png") no-repeat right
+  width 100%
+  height 80px
+  padding 0 12px
+  margin-top 50px
+
+.link-bg-m
+  display flex
+  flex-direction column
+  justify-content flex-end
+  align-items flex-end
+  background url("../assets/images/link-bg-320-m.png") no-repeat right
+  width 100%
+  height 137px
+  padding 16px 20px
+  margin-top 30px
+
+.link-bg-l
+  display flex
+  flex-direction column
+  justify-content flex-end
+  align-items flex-end
+  background url("../assets/images/link-bg-320-l.png") no-repeat right
+  width 100%
+  height 171px
+  padding 21px 5px
+  margin-top 50px
+
+.link
+  display inline-flex
+  align-items center
+  font-family fontBold
+  font-size 17px
+  color colorRed
+  float right
+  &:hover
+  &:focus
+    color colorRed
+  &:after
+    content ""
+    background url("../assets/images/arrow.png") no-repeat
+    background-size contain
+    width 16px
+    height 16px
+    margin-left 18px
+
+.link-prev
+  &:after
+    content none
+  &:before
+    content ""
+    background url("../assets/images/arrow.png") no-repeat
+    background-size contain
+    width 16px
+    height 16px
+    margin-right 18px
+    transform rotate(180deg)
+
+.tab-item
+  font-family fontBold
+  font-size 18px
+  color colorRed
+  margin-bottom 30px
+  margin-right 43px
+  opacity 0.3
+  &:last-of-type
+    margin-right 0
+  &:before
+    content "/"
+    margin-right 4px
+  &:hover
+  &:focus
+  &.active
+    color colorRed
+    opacity 1
+
+.branch
+  tile()
+  padding 26px 20px
+  margin-bottom 20px
+  height 96px
+  overflow hidden
+  display flex
+  align-items center
+  h4
+    font-family fontVarMedium
+    margin-bottom 0
+    color colorDark
+
+.article
+  tile()
+  padding 40px 20px
+  margin-bottom 30px
+  height 313px
+  display flex
+  flex-direction column
+  justify-content space-between
+
+.article-info
+  display flex
+  align-items center
+  justify-content space-between
+  margin-bottom 38px
+
+.desc
+  font-family fontRegular
+  font-size 14px
+  color colorGrey
+
+.article-title
+  overflow hidden
+  margin-bottom 0
+  color colorDark
+
+footer
+.footer
+  background colorLight
+  padding 84px 0 50px
+  .link
+    float none
+
+.footer-contacts-wrapper
+  margin-bottom 70px
+
+.footer-logo
+  margin-bottom 10px
+
+.footer-contacts
+  font-family fontVarRegular
+  font-size 16px
+  line-height 1.8
+  color colorDark
+  opacity 0.7
+  margin-bottom 7px
+
+.footer-links-primary
+  margin-bottom 70px
+  li
+    margin-bottom 24px
+
+.footer-link-primary
+.footer-link-featured
+  font-family fontBold
+  font-size 18px
+  color colorDark
+
+.footer-link-featured
+  margin-bottom 35px
+
+.footer-links-secondary
+  margin-bottom 70px
+  li
+    margin-bottom 15px
+
+.footer-link
+  font-family fontRegular
+  font-size 13px
+  line-height 1.8
+  opacity 0.7
+
+.footer-text
+  font-family fontRegular
+  font-size 14px
+  color colorDark
+  opacity 0.4
+  margin-bottom 70px
+  &:last-of-type
+    margin-bottom 0
+
+.link-underlined
+  text-decoration underline
+  &:hover
+  &:focus
+    text-decoration underline
+
+.about-title
+  background url("../assets/images/bg-about.png") no-repeat left
+  background-size cover
+  height 322px
+  margin-bottom 94px
+
+.principle
+  tile()
+  height 145px
+  padding 20px
+  margin-bottom 30px
+  display flex
+  align-items center
+  justify-content space-between
+  h4,.h4
+    margin-bottom 5px
+    color colorDark
+
+.principle-img
+  margin-right 14px
+  width 75px
+  height 75px
+  display flex
+  align-items center
+  justify-content center
+  flex-shrink 0
+
+.principle-text
+  font-family fontRegular
+  font-size 11px
+  line-height 1.8
+  color colorDark
+  overflow hidden
+
+.awards
+  background url("../assets/images/bg-awards.png") no-repeat center
+  background-size cover
+  height 219px
+  display flex
+  align-items center
+  justify-content space-between
+  margin 50px 0
+
+.award
+  tile()
+  height 62px
+  padding 14px
+  background colorWhite
+  display flex
+  align-items center
+  justify-content center
+
+.award-s
+  width 62px
+
+.award-l
+  width 136px
+
+.sidebar
+  margin-bottom 50px
+
+.sidebar-nav
+  .tab-item
+    font-size 16px
+    margin-bottom 30px
+    margin-right 30px
+    &:last-of-type
+      margin-right 0
+
+.sidebar-branch
+  font-family fontRegular
+  font-size 15px
+  line-height 1.4
+  color colorDark
+  display flex
+  align-items center
+  height 52px
+  padding 0 15px
+  &:hover
+  &:focus
+    background colorLight
+
+.dropdown-toggle
+  font-family fontRegular
+  font-size 13px
+  line-height 1.8
+  color colorDark
+  background colorLight
+  width 100%
+  height 46px
+  border 0
+  padding 0 20px
+
+.menu-branches
+  tile()
+  min-width auto
+  border 0
+  border-radius 0
+  margin 0
+  padding 20px 0
+
+.person
+  margin-bottom 50px
+  &:last-of-type
+    margin-bottom 0
+
+.person-img
+  tile()
+  display flex
+  align-items center
+  justify-content center
+  margin-bottom 30px
+
+.person-name
+  margin-bottom 5px
+
+.person-position
+  font-family fontRegular
+  font-size 11px
+  line-height 1.8
+  color colorDark
+  margin-bottom 15px
+
+.person-career
+  font-family fontRegular
+  font-size 16px
+  line-height 1.6
+  color colorGrey
+  margin-bottom 20px
+
+.person-info
+  font-family fontRegular
+  font-size 14px
+  line-height 1.8
+  color #000
+  p
+    margin-bottom 20px
+  span
+    font-family fontBold
+
+.person-link
+  float none
+  margin-bottom 23px
+
+.person-others
+  display none
+
+.list
+  margin-bottom 50px
+  li
+    position relative
+    padding-left 20px
+    margin-bottom 15px
+    &:last-of-type
+      margin-bottom 0
+    &:before
+      content "/"
+      position absolute
+      top 3px
+      left 0
+      color colorRed
+
+.link-vertical
+  float none
+  margin-left 20px
+  &:after
+    transform rotate(90deg)
+    margin-left 13px
+
+.team-title
+  background url("../assets/images/bg-team.png") no-repeat left
+  background-size cover
+  height 349px
+  padding-top 13px
+  margin-bottom 50px
+
+.join-title
+  background url("../assets/images/bg-join.png") no-repeat left
+  background-size cover
+  height 362px
+  padding-top 45px
+  padding-bottom 40px
+  margin-bottom 100px
+
+.btn-send
+  font-family fontBold
+  font-size 18px
+  color colorWhite
+  background url("../assets/images/bg-button.png") no-repeat center
+  width 300px
+  height 65px
+  display flex
+  align-items center
+  justify-content center
+  margin-top 30px
+  &:hover
+  &:focus
+    color colorWhite
+
+.article-category
+  font-family fontRegular
+  font-size 18px
+  color colorGrey
+  margin-bottom 20px
+
+.article-wrapper
+  margin-bottom 50px
+
+.article-media
+  display flex
+  align-items center
+  justify-content center
+  height 172px
+  margin-top 30px
+  margin-bottom 20px
+
+.publications
+  margin 0 -10px
+
+.publication
+  tile()
+  height 367px
+  padding 40px 10px
+  margin-bottom 40px
+  display flex
+  flex-direction column
+  justify-content space-between
+
+.publication-title
+  display flex
+  align-items center
+  justify-content space-between
+  padding 0 6px
+  margin-bottom 30px
+  h4
+    margin-bottom 0
+
+.publication-text
+  overflow hidden
+
+.doc-img
+  max-width 50px
+  margin-right 26px
+
+.publication-info
+  display flex
+  align-items center
+  justify-content space-between
+  margin-top 31px
+
+.contacts
+  h4
+    margin-bottom 10px
+  .link
+    float none
+
+.contacts-wrapper
+  font-family fontRegular
+  font-size 16px
+  line-height 1.6
+  color #343434
+  margin-bottom 30px
+
+.map
+  tile()
+  display flex
+  width 100%
+  height 100%
+  margin-bottom 50px
+  height 500px
+  filter grayscale(0.75)
+  iframe
+    width 100%
+    height 100%
+
+/** Hamburger icon **/
+.navbar-toggler
+  padding 0
+  border 0
+  &:hover
+  &:focus
+    outline none
+
+.navbar-toggler .icon-bar
+  display block
+  width 30px
+  height 2px
+  background colorRed
+  position relative
+  transform rotate(0)
+  transform-origin left center
+  transition all 0.25s
+
+.navbar-toggler .icon-bar+.icon-bar
+  margin-top 5px
+
+.navbar-toggler.active .icon-bar:nth-of-type(1)
+  -webkit-transform rotate(45deg)
+  transform rotate(45deg)
+  top 0
+
+.navbar-toggler.active .icon-bar:nth-of-type(2)
+  opacity 0
+
+.navbar-toggler.active .icon-bar:nth-of-type(3)
+  -webkit-transform rotate(-45deg)
+  transform rotate(-45deg)
+  top: 7px
+/** Hamburger icon end**/
+
+header
+.header
+  position relative
+  .container
+    padding 0
+
+.navbar
+  padding 20px 20px 20px 10px
+  box-shadow 4px 4px 120px rgba(0,0,0,0.15)
+
+.navbar-collapse
+  justify-content center
+
+.navbar-nav
+  padding 20px 0
+
+.menu-item
+  position relative
+  margin 16px 0
+
+.menu-link
+  display block
+  position relative
+  z-index 1000
+  font-family fontVarMedium
+  font-size 18px
+  color colorDark
+
+.header-logo
+  max-width 66px
+
+.dropdown-lang
+  position absolute
+  top 20px
+  right 0
+  left 0
+  margin auto
+  width 54px
+
+.btn-dropdown
+  font-family fontRegular
+  font-size 18px
+  color colorDark
+  text-transform uppercase
+  background transparent
+  border 0
+  padding 0 6px
+  display flex
+  align-items center
+  &:after
+    content ""
+    background url("../assets/images/icon-dropdown.png") no-repeat center
+    background-size contain
+    width 12px
+    height 8px
+    margin-left 6px
+    margin-top -3px
+  &[aria-expanded="true"]
+    &:after
+      transform rotate(180deg)
+      margin-top -6px
+
+.menu-lang
+  tile()
+  border 0
+  border-radius 0
+  width 100%
+  min-width auto
+  padding 6px
+
+.lang
+  font-size 18px
+  text-transform uppercase
+  padding 0
+  margin 5px 0
+  outline none
+  &:hover
+  &:focus
+  &:active
+    color inherit
+    background-color inherit
+
+.bg-text-about
+  position absolute
+  top 6%
+  right 0
+  background url("../assets/images/text-about.png") no-repeat center
+  background-size contain
+  width 20px
+  height 98px
+
+.bg-text-press
+  background url("../assets/images/text-press.png") no-repeat left
+  background-size contain
+  height 32px
+  margin-bottom 30px
+
+.bg-text-probono
+  position absolute
+  top 6%
+  right 0
+  background url("../assets/images/text-probono.png") no-repeat center
+  background-size contain
+  width 24px
+  height 186px
+
+.bg-text-contacts
+  position absolute
+  top auto
+  bottom 13%
+  right 0
+  background url("../assets/images/text-contacts.png") no-repeat center
+  background-size contain
+  width 52px
+  height 450px

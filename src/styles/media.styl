@@ -1,0 +1,601 @@
+fontRegular = CodecColdRegular
+fontBold = CodecColdBold
+fontExtraBold = CodecColdExtraBold
+fontHeavy = CodecColdHeavy
+fontLight = CodecColdLight
+fontVarRegular = MullerRegular
+fontVarMedium = MullerMedium
+fontVarBold = MullerBold
+fontVarExtraBold = MullerExtraBold
+fontVar2Regular = GothamProRegular
+colorWhite = #ffffff
+colorGrey = #9c9c9c
+colorLight = #f4f4f4
+colorDark = #2c3e50
+colorRed = #7f233f
+
+tile()
+  background colorWhite
+  box-shadow 0 0 40px rgba(0,0,0,0.12)
+  &:last-of-type
+    margin-bottom 0
+
+// Small devices (landscape phones, 576px and up)
+//@media (min-width: 576px)
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px)
+  .container
+    padding 0 10px
+
+  .row
+    margin-left -10px
+    margin-right -10px
+
+  [class*="col-"]
+    padding-left 10px
+    padding-right 10px
+
+  .page
+    padding-top 100px
+
+  h1
+  .h1
+    margin-bottom 20px
+    .main-title &
+      margin-bottom 0
+    .about-title &
+      margin-bottom 20px
+
+  .h2-about
+    margin-bottom 50px
+  .h2-principles
+    margin-bottom 28px
+
+  h4
+  .h4
+    margin-bottom 20px
+
+  .screen-main
+    height calc(100vh - 190px)
+
+  .main-title
+    background url("../assets/images/bg-main-768.png") no-repeat left
+    background-size cover
+
+  .section
+    padding-bottom 100px
+
+  .link-bg-s
+    background url("../assets/images/link-bg-768-s.png") no-repeat right
+    height 80px
+    padding 0 43px
+    margin-top -120px
+
+  .link-bg-m
+    position relative
+    z-index 10
+    background url("../assets/images/link-bg-768-m.png") no-repeat right
+    height 146px
+    padding 17px 19px
+    margin-top -28px
+
+  .link-bg-l
+    background url("../assets/images/link-bg-768-l.png") no-repeat right
+    height 80px
+    padding 21px
+
+  .tab-item
+    font-size 16px
+    margin-bottom 50px
+    margin-right 53px
+
+  .branch
+    padding 32px 20px
+    margin-bottom 40px
+    height 120px
+
+  .article-title
+    margin-bottom 0
+
+  footer
+  .footer
+    padding 84px 0 70px
+
+  .footer-links-secondary
+    margin-bottom 0
+    li
+      margin-bottom 17px
+
+  .footer-text
+    margin-bottom 0
+    &:first-of-type
+      float left
+    &:last-of-type
+      float right
+
+  .about-title
+    background url("../assets/images/bg-about-768.png") no-repeat left
+    background-size cover
+    padding-top 9px
+    margin-bottom 130px
+
+  .principle
+    height 164px
+    padding 23px
+    margin-bottom 20px
+
+  .principle-img
+    width 85px
+    height 85px
+
+  .principle-text
+    font-size 13px
+
+  .awards
+    background url("../assets/images/bg-awards-768.png") no-repeat center
+    background-size cover
+    height 239px
+    margin 0
+
+  .award
+    height 70px
+    padding 16px
+
+  .award-s
+    width 70px
+
+  .award-l
+    width 154px
+
+  .img-about
+    margin-top 40px
+
+  .sidebar
+    margin-bottom 0
+
+  .sidebar-nav
+    position relative
+    z-index 10000
+    justify-content space-between
+    padding 20px 15px 0 20px
+    .tab-item
+      margin-bottom 20px
+      margin-right 0
+
+  .sidebar-branch
+    height 64px
+    padding 0 15px 0 20px
+
+  .dropdown-branches
+    position unset
+
+  .dropdown-toggle
+    display none
+
+  .menu-branches
+    display block
+    position absolute
+    top 0
+    right 10px
+    left 10px
+    padding 56px 0 28px
+
+  .person
+    margin-bottom 30px
+
+  .person-img
+    margin-bottom 20px
+
+  .person-link
+    margin-bottom 13px
+
+  .person-others
+    display flex
+    align-items center
+    justify-content space-between
+
+  .team-title
+    background url("../assets/images/bg-team-768.png") no-repeat left
+    background-size cover
+    padding-top 27px
+    padding-bottom 10px
+    margin-bottom 60px
+
+  .join-title
+    background url("../assets/images/bg-join-768.png") no-repeat left
+    background-size cover
+    padding-top 55px
+    padding-bottom 45px
+    margin-bottom 0
+
+  .btn-send
+    background url("../assets/images/bg-button-1920.png") no-repeat center
+    width 260px
+    height 56px
+
+  .article-wrapper
+    margin-bottom 100px
+
+  .article-media
+    height 400px
+    margin-top 50px
+
+  .publication
+    height 286px
+    padding 20px
+    margin-bottom 20px
+
+  .publication-title
+    padding 0
+    margin-bottom 20px
+
+  .doc-img
+    max-width 30px
+
+  header
+  .header
+    margin-top 30px
+    .container
+      padding 0 10px
+
+  .navbar
+    padding 17px 20px 15px 11px
+
+  .header-logo
+    max-width 90px
+
+  .bg-text-about
+    position absolute
+    top 6%
+    right -3%
+    background url("../assets/images/text-about-768.png") no-repeat center
+    background-size contain
+    width 43px
+    height 206px
+
+  .bg-text-press
+    background url("../assets/images/text-press-768.png") no-repeat left
+    background-size contain
+    height 73px
+    margin-bottom 50px
+
+  .bg-text-probono
+    position absolute
+    top 0
+    right 0
+    background url("../assets/images/text-probono-768.png") no-repeat center
+    background-size contain
+    width 36px
+    height 283px
+
+  .bg-text-contacts
+    top 13%
+    bottom auto
+    background url("../assets/images/text-contacts-768.png") no-repeat center
+    background-size contain
+    width 40px
+    height 359px
+
+  .map
+    margin-bottom 0
+    height 100%
+
+// Large devices (desktops, 992px and up)
+//@media (min-width: 992px)
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px)
+  .container
+    max-width 1200px
+    padding 0 20px
+
+  .row
+    margin-left -20px
+    margin-right -20px
+
+  [class*="col-"]
+    padding-left 20px
+    padding-right 20px
+
+  .page
+    padding-top 130px
+
+  h1
+  .h1
+    font-size 52px
+    margin-bottom 40px
+    .main-title &
+      margin-bottom 12px
+    .about-title &
+      margin-bottom 40px
+
+  h2
+  .h2
+    font-size 36px
+
+  .h2-about
+    margin-bottom 56px
+  .h2-principles
+    margin-bottom 64px
+  .h2-join
+    margin-bottom 15px
+  .h2-article
+    margin-bottom 32px
+  .h2-contacts
+    margin-bottom 64px
+
+  h3
+  .h3
+    font-size 32px
+    margin-bottom 40px
+
+  h4
+  .h4
+    font-size 24px
+    margin-bottom 24px
+
+  .text-large
+    font-size 22px
+
+  .text-regular
+    font-size 16px
+
+  .screen-main
+    height calc(100vh - 274px)
+
+  .main-title
+    background url("../assets/images/bg-main-1920.png") no-repeat left
+    background-size cover
+    padding-top 86px
+    margin-bottom 56px
+
+  .link-bg-s
+    background url("../assets/images/link-bg-1920-s.png") no-repeat right
+    height 80px
+    padding 30px 32px 26px
+
+  .link-bg-m
+    background url("../assets/images/link-bg-1920-m.png") no-repeat right
+    height 240px
+    padding 29px 32px
+    margin-top -120px
+
+  .link-bg-l
+    background url("../assets/images/link-bg-1920-l.png") no-repeat right
+    height 200px
+    padding 29px 32px
+    margin-top 160px
+
+  .link
+    font-size 20px
+
+  .tab-item
+    font-size 36px
+    margin-bottom 64px
+    margin-right 28px
+    &:before
+      margin-right 8px
+
+  .article
+    padding 40px
+    margin-bottom 40px
+    height 352px
+
+  .article-info
+    margin-bottom 32px
+
+  .article-title
+    margin-bottom 0
+
+  footer
+  .footer
+    padding 80px 0 40px
+
+  .footer-contacts-wrapper
+    margin-bottom 0
+
+  .footer-links-primary
+    margin-bottom 0
+
+  .footer-link-featured
+    margin-bottom 24px
+
+  .footer-links-secondary
+    margin-bottom 0
+
+  .footer-link
+    font-size 16px
+
+  .footer-text
+    margin-bottom 0
+    margin-top 40px
+
+  .about-title
+    background url("../assets/images/bg-about-1920.png") no-repeat left
+    background-size cover
+    padding 30px 0 40px
+    margin-bottom 187px
+
+  .principle
+    height 200px
+    padding 40px
+    margin-bottom 40px
+    h4,.h4
+      margin-bottom 10px
+
+  .principle-img
+    margin-right 30px
+    width 120px
+    height 120px
+
+  .principle-text
+    font-size 16px
+
+  .awards
+    background url("../assets/images/bg-awards-1920.png") no-repeat center
+    height 464px
+    margin 0
+
+  .award
+    height 136px
+    padding 30px
+
+  .award-s
+    width 136px
+
+  .award-l
+    width 300px
+
+  .sidebar-nav
+    padding 40px 40px 0
+    .tab-item
+      font-size 24px
+      margin-bottom 24px
+
+  .sidebar-branch
+    padding 0 40px
+
+  .menu-branches
+    right 20px
+    left 20px
+    padding 96px 0 24px
+
+  .person
+    margin-bottom 56px
+
+  .person-img
+    margin-bottom 24px
+
+  .person-name
+    margin-bottom 16px
+
+  .person-position
+    font-size 16px
+    margin-bottom 16px
+
+  .person-career
+    font-size 22px
+    margin-bottom 40px
+
+  .person-info
+    font-size 16px
+
+  .person-link
+    margin-bottom 0
+
+  .team-title
+    background url("../assets/images/bg-team-1920.png") no-repeat left
+    background-size cover
+    padding-top 34px
+    padding-bottom 40px
+    margin-bottom 100px
+
+  .join-title
+    background url("../assets/images/bg-join-1920.png") no-repeat left
+    background-size cover
+    padding-top 71px
+    padding-bottom 83px
+
+  .btn-send
+    margin-top 15px
+
+  .article-wrapper
+    margin-bottom 48px
+
+  .article-media
+    height 664px
+    margin-top 20px
+    margin-bottom 24px
+
+  .publication
+    height 360px
+    padding 36px 40px
+    margin-bottom 40px
+
+  .publication-title
+    margin-bottom 36px
+
+  .publication-text
+    font-size 16px
+
+  .doc-img
+    max-width 66px
+    margin-right 30px
+
+  .contacts
+    h4
+      margin-bottom 16px
+
+  .contacts-wrapper
+    font-size 22px
+    margin-bottom 48px
+
+  header
+  .header
+    margin-top 56px
+    .container
+      padding 0 20px
+
+  .navbar
+    padding 24px 40px
+
+  .header-logo
+    max-width 131px
+
+  .dropdown-lang
+    top auto
+    right 34px
+    left auto
+
+  .navbar-nav
+    padding 0
+
+  .menu-item
+    margin 0 16px
+    &.active
+      &:after
+        position absolute
+        top -35px
+        left 0
+        z-index 10
+        content ""
+        background url("../assets/images/menu-line.png") no-repeat left
+        background-size contain
+        width 102px
+        height 88px
+
+  .menu-link
+    display inline-block
+
+  .bg-text-about
+    position absolute
+    top 0
+    right -8%
+    background url("../assets/images/text-about-1920.png") no-repeat center
+    background-size contain
+    width 88px
+    height 419px
+
+  .bg-text-press
+    background url("../assets/images/text-press-1920.png") no-repeat left
+    background-size contain
+    width 986px
+    height 104px
+    margin-bottom 40px
+
+  .bg-text-probono
+    position absolute
+    right -8%
+    background url("../assets/images/text-probono-1920.png") no-repeat center
+    background-size contain
+    width 79px
+    height 620px
+
+  .bg-text-contacts
+    top 0
+    right -8%
+    background url("../assets/images/text-contacts-1920.png") no-repeat center
+    background-size contain
+    width 84px
+    height 738px
