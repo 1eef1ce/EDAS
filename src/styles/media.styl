@@ -13,6 +13,7 @@ colorGrey = #9c9c9c
 colorLight = #f4f4f4
 colorDark = #2c3e50
 colorRed = #7f233f
+colorLightRed = #b74568
 
 tile()
   background colorWhite
@@ -47,8 +48,6 @@ tile()
     .about-title &
       margin-bottom 20px
 
-  .h2-about
-    margin-bottom 50px
   .h2-principles
     margin-bottom 28px
 
@@ -79,7 +78,7 @@ tile()
     background url("../assets/images/link-bg-768-m.png") no-repeat right
     height 146px
     padding 17px 19px
-    margin-top -28px
+    margin-top -20px
 
   .link-bg-l
     background url("../assets/images/link-bg-768-l.png") no-repeat right
@@ -214,7 +213,6 @@ tile()
     margin-bottom 0
 
   .btn-send
-    background url("../assets/images/bg-button-1920.png") no-repeat center
     width 260px
     height 56px
 
@@ -235,7 +233,8 @@ tile()
     margin-bottom 20px
 
   .doc-img
-    max-width 30px
+    max-width 39px
+    margin-right 26px
 
   header
   .header
@@ -244,40 +243,30 @@ tile()
       padding 0 10px
 
   .navbar
-    padding 17px 20px 15px 11px
+    padding 11px 20px 12px 11px
 
   .header-logo
     max-width 140px
 
   .bg-text-about
-    position absolute
-    top 6%
+    top 56px
     right -3%
-    background url("../assets/images/text-about-768.png") no-repeat center
-    background-size contain
     width 43px
     height 206px
 
   .bg-text-press
-    background url("../assets/images/text-press-768.png") no-repeat left
-    background-size contain
     height 73px
     margin-bottom 50px
 
   .bg-text-probono
-    position absolute
     top 0
     right 0
-    background url("../assets/images/text-probono-768.png") no-repeat center
-    background-size contain
     width 36px
     height 283px
 
   .bg-text-contacts
     top 13%
     bottom auto
-    background url("../assets/images/text-contacts-768.png") no-repeat center
-    background-size contain
     width 40px
     height 359px
 
@@ -353,7 +342,9 @@ tile()
     background-size contain
     height 299px
     padding-top 86px
-    margin-bottom 56px
+    h2
+    .h2
+      margin-bottom 44px
 
   .link-bg-s
     background url("../assets/images/link-bg-1920-s.png") no-repeat right
@@ -528,8 +519,8 @@ tile()
     font-size 16px
 
   .doc-img
-    max-width 66px
-    margin-right 30px
+    max-width 84px
+    margin-right 20px
 
   .contacts
     h4
@@ -546,14 +537,15 @@ tile()
       padding 0 20px
 
   .navbar
-    padding 24px 40px
+    padding 17px 40px
 
   .header-logo
     max-width 200px
 
   .dropdown-lang
+    position relative
     top auto
-    right 34px
+    right auto
     left auto
 
   .navbar-nav
@@ -561,49 +553,44 @@ tile()
 
   .menu-item
     margin 0 16px
+    &:after
+      position absolute
+      top -35px
+      left 0
+      z-index 10
+      content ""
+      background url("../assets/images/menu-line.svg") no-repeat left
+      background-size contain
+      width 102px
+      height 88px
+      opacity 0
+      transition opacity 0.75s ease-in-out
+    &:hover
     &.active
       &:after
-        position absolute
-        top -35px
-        left 0
-        z-index 10
-        content ""
-        background url("../assets/images/menu-line.png") no-repeat left
-        background-size contain
-        width 102px
-        height 88px
+        opacity 1
 
   .menu-link
     display inline-block
 
   .bg-text-about
-    position absolute
-    top 0
+    top 50px
     right -8%
-    background url("../assets/images/text-about-1920.png") no-repeat center
-    background-size contain
     width 88px
     height 419px
 
   .bg-text-press
-    background url("../assets/images/text-press-1920.png") no-repeat left
-    background-size contain
     width 986px
     height 104px
     margin-bottom 40px
 
   .bg-text-probono
-    position absolute
     right -8%
-    background url("../assets/images/text-probono-1920.png") no-repeat center
-    background-size contain
     width 79px
     height 620px
 
   .bg-text-contacts
     top 0
     right -8%
-    background url("../assets/images/text-contacts-1920.png") no-repeat center
-    background-size contain
     width 84px
     height 738px

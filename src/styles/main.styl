@@ -13,10 +13,24 @@ colorGrey = #9c9c9c
 colorLight = #f4f4f4
 colorDark = #2c3e50
 colorRed = #7f233f
+colorLightRed = #b74568
 
 tile()
   background colorWhite
   box-shadow 0 0 40px rgba(0,0,0,0.12)
+
+hover()
+  transition all 0.5s ease-in-out
+  &:hover
+    box-shadow 0 0 60px rgba(126,34,62,0.25)
+    transform translateY(-10px)
+    h4
+      color colorRed
+    .link
+      color colorLightRed
+      &:after
+        filter brightness(1.5)
+        transform translateX(10px)
 
 @font-face
   font-family GothamProRegular
@@ -105,7 +119,7 @@ a
   &:hover
   &:focus
     color colorRed
-    text-decoration none
+    text-decoration underline
 
 img
   display block
@@ -191,21 +205,24 @@ h4
   background-size cover
   height 146px
   padding-top 20px
-  margin-bottom 30px
   h2
   .h2
     color colorDark
-    margin-bottom 0
+    margin-bottom 30px
 
 .section
   position relative
   padding-bottom 100px
+
+#about
+  padding-top 50px
 
 .text-large
   font-family fontRegular
   font-size 16px
   line-height 1.6
   color colorDark
+  padding 0!important
 
 .text-regular
   font-family fontRegular
@@ -217,26 +234,21 @@ h4
   position relative
   z-index 100
 
-.link-next-wrapper
+.link-more-wrapper
   position relative
   bottom 10%
   text-align center
 
-.link-next
+.link-more
   display inline-flex
   flex-direction column
   font-family fontRegular
   font-size 16px
   line-height 1.6
   color #343434
-  &:after
-    content ""
-    background url("../assets/images/arrow.png") no-repeat
-    background-size contain
-    width 16px
-    height 16px
-    transform rotate(90deg)
-    margin 8px auto 0
+  &:hover
+    img
+      filter brightness(1.5)
 
 .link-bg-s
   display flex
@@ -277,29 +289,57 @@ h4
   font-family fontBold
   font-size 17px
   color colorRed
-  float right
   &:hover
   &:focus
-    color colorRed
+    color colorLightRed
+
+.link-vertical
+  float none
+  margin-left 20px
+  margin-bottom 50px
   &:after
     content ""
-    background url("../assets/images/arrow.png") no-repeat
-    background-size contain
     width 16px
     height 16px
+    transition transform 0.5s ease-in-out
+    background url("../assets/images/arrow-down.svg") no-repeat
+    margin-left 13px
+  &:hover
+  &:focus
+    &:after
+      filter brightness(1.5)
+
+.link-next
+  float right
+  &:after
+    content ""
+    width 16px
+    height 16px
+    transition transform 0.5s ease-in-out
+    background url("../assets/images/arrow-next.svg") no-repeat
+    background-size contain
     margin-left 18px
+  &:hover
+  &:focus
+    &:after
+      filter brightness(1.5)
+      transform translateX(10px)
 
 .link-prev
-  &:after
-    content none
+  float left
   &:before
     content ""
-    background url("../assets/images/arrow.png") no-repeat
-    background-size contain
     width 16px
     height 16px
+    transition transform 0.5s ease-in-out
+    background url("../assets/images/arrow-prev.svg") no-repeat
+    background-size contain
     margin-right 18px
-    transform rotate(180deg)
+  &:hover
+  &:focus
+    &:before
+      filter brightness(1.5)
+      transform translateX(-10px)
 
 .tab-item
   font-family fontBold
@@ -308,6 +348,7 @@ h4
   margin-bottom 30px
   margin-right 43px
   opacity 0.3
+  transition opacity 0.5s ease-in-out
   &:last-of-type
     margin-right 0
   &:before
@@ -321,6 +362,7 @@ h4
 
 .branch
   tile()
+  hover()
   padding 26px 20px
   margin-bottom 20px
   height 96px
@@ -334,6 +376,7 @@ h4
 
 .article
   tile()
+  hover()
   padding 40px 20px
   margin-bottom 30px
   height 313px
@@ -388,6 +431,9 @@ footer
   font-family fontBold
   font-size 18px
   color colorDark
+  &:hover
+  &:focus
+    color colorRed
 
 .footer-link-featured
   margin-bottom 35px
@@ -402,6 +448,9 @@ footer
   font-size 13px
   line-height 1.8
   opacity 0.7
+  &:hover
+  &:focus
+    text-decoration underline
 
 .footer-text
   font-family fontRegular
@@ -412,8 +461,8 @@ footer
   &:last-of-type
     margin-bottom 0
 
-.link-underlined
-  text-decoration underline
+.link-agency
+  opacity 0.7
   &:hover
   &:focus
     text-decoration underline
@@ -496,6 +545,7 @@ footer
   align-items center
   height 52px
   padding 0 15px
+  transition background 0.5s ease-in-out
   &:hover
   &:focus
     background colorLight
@@ -580,12 +630,8 @@ footer
       left 0
       color colorRed
 
-.link-vertical
-  float none
-  margin-left 20px
-  &:after
-    transform rotate(90deg)
-    margin-left 13px
+.list-hidden
+  display none
 
 .team-title
   background url("../assets/images/bg-team.png") no-repeat left
@@ -603,19 +649,21 @@ footer
   margin-bottom 100px
 
 .btn-send
-  font-family fontBold
+  font-family fontRegular
   font-size 18px
   color colorWhite
-  background url("../assets/images/bg-button.png") no-repeat center
+  background colorRed
   width 300px
   height 65px
   display flex
   align-items center
   justify-content center
   margin-top 30px
+  transition background 0.5s ease-in-out
   &:hover
   &:focus
     color colorWhite
+    background colorLightRed
 
 .article-category
   font-family fontRegular
@@ -639,6 +687,7 @@ footer
 
 .publication
   tile()
+  hover()
   height 367px
   padding 40px 10px
   margin-bottom 40px
@@ -660,7 +709,7 @@ footer
 
 .doc-img
   max-width 50px
-  margin-right 26px
+  margin-right 20px
 
 .publication-info
   display flex
@@ -735,7 +784,7 @@ header
     padding 0
 
 .navbar
-  padding 20px 20px 20px 10px
+  padding 17px 20px 17px 10px
   box-shadow 4px 4px 120px rgba(0,0,0,0.15)
 
 .navbar-collapse
@@ -779,7 +828,7 @@ header
   align-items center
   &:after
     content ""
-    background url("../assets/images/icon-dropdown.png") no-repeat center
+    background url("../assets/images/icon-dropdown.svg") no-repeat center
     background-size contain
     width 12px
     height 8px
@@ -812,15 +861,15 @@ header
 
 .bg-text-about
   position absolute
-  top 6%
+  top 74px
   right 0
-  background url("../assets/images/text-about.png") no-repeat center
+  background url("../assets/images/text-about.svg") no-repeat center
   background-size contain
   width 20px
   height 98px
 
 .bg-text-press
-  background url("../assets/images/text-press.png") no-repeat left
+  background url("../assets/images/text-press.svg") no-repeat left
   background-size contain
   height 32px
   margin-bottom 30px
@@ -829,7 +878,7 @@ header
   position absolute
   top 6%
   right 0
-  background url("../assets/images/text-probono.png") no-repeat center
+  background url("../assets/images/text-probono.svg") no-repeat center
   background-size contain
   width 24px
   height 186px
@@ -839,7 +888,21 @@ header
   top auto
   bottom 13%
   right 0
-  background url("../assets/images/text-contacts.png") no-repeat center
+  background url("../assets/images/text-contacts.svg") no-repeat center
   background-size contain
   width 52px
   height 450px
+
+@keyframes linear-bounce
+  0%
+    transform translateY(0)
+  50%
+    transform translateY(10px)
+  100%
+    transform translateY(0)
+
+.linear-bounce
+  animation-name linear-bounce
+  animation-timing-function linear
+  animation-duration 1.5s
+  animation-iteration-count infinite
