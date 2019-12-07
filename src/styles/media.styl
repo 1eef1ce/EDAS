@@ -59,9 +59,13 @@ tile()
     height calc(100vh - 190px)
 
   .main-title
-    background url("../assets/images/bg-main-768.png") no-repeat left
-    background-size contain
-    height 129px
+    background none
+    height auto
+    svg
+      display block
+      position absolute
+      top 0
+      left -10%
 
   .section
     padding-bottom 100px
@@ -338,9 +342,6 @@ tile()
     height calc(100vh - 274px)
 
   .main-title
-    background url("../assets/images/bg-main-1920.png") no-repeat left
-    background-size contain
-    height 299px
     padding-top 86px
     h2
     .h2
